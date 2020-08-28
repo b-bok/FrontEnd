@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제 4</title>
+</head>
+<body>
+    
+    <form action="test.do">
+
+        <fieldset >
+            <legend>납품자 정보</legend>
+            <ol>
+                <li>납품자명 : 
+                    <input type="text" name="name" placeholder="name" required>
+                </li>
+                <li>
+                    email : 
+                    <input type="email" name="email" placeholder="answs@naver.com">
+                </li>
+                <li>
+                    홈페이지 :
+                    <input type="url" name="homepaeg" placeholder="http://">
+                </li>
+            </ol>
+
+
+        </fieldset>
+
+        <br>
+        <br>
+
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li>상품명 : 
+                    <input type="text" name="pName" required >
+                </li>
+                <li>
+                    납품수량 : 
+                    <input type="text" name="amount" placeholder="최소100" required>
+                </li>
+                <li>
+                    납품등급 :
+                    <input type="range" name="grade" value="50" step="10">
+                   
+                </li>
+                <li>
+                    기타사항 :
+                    <textarea name="content" col = "10" rows="2" ></textarea>
+                </li>
+
+            </ul>
+        </fieldset>
+        <input type="submit" value="send message">
+        
+
+    </form>
+
+
+
+
+</body>
+</html>
