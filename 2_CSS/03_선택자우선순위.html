@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color:palevioletred;
+            background-color: yellowgreen;
+        }
+        h1 {
+            color: red;
+        }
+
+        #id1 {
+            background-color: violet;
+        }
+
+
+        .class1 {
+            background-color: tomato;
+        }
+
+        div {
+            background-color: teal !important;
+            color: whitesmoke;
+            width: 200px;
+            height: 200px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>선택자 우선순위</h1>
+
+    <p>
+        기본적으로  css속성은 위에서 아래로 적용됨 <br>
+
+        같은 요소에 다양한 선택자로 css가 부여된 경우 우선순위에 따라 스타일 적용 <br>
+        태그선택자->클래스선택자->아이디선택자->인라인스타일방식->!important
+    </p>
+
+    <div id="id1" class="class1" style="background-color: turquoise;">우선순위 테스트</div>
+</body>
+</html>
