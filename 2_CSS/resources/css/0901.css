@@ -1,0 +1,25 @@
+form {
+    border-width: 10px;
+    padding : 20px;
+    background-color:pink;
+    border-radius: 20px;
+    
+    width: 500px;
+    height: 430px;
+
+}
+legend {
+    font-weight: 900;
+}
+
+fieldset {
+    background-color: rgb(255, 75, 114);
+    border: none;
+}
+
+#submit {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
