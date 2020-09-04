@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border:1px solid red;
+        }
+
+        p {
+            border:1px solid blue;
+            box-sizing: border-box;
+        }
+        #footer {
+            width: 1000px;
+            height: 150px;
+
+        }
+
+        #footer>div { width: 100%;} 
+        #footer_1 {height: 20%;}
+        #footer_2 {height: 80%;}
+
+        #footer_2>p {width: 100%; margin: 0;}
+        #p1 {height: 80%;}
+        #p2 {height: 20%;}
+        
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <div id="footer">
+        <div id="footer_1">
+
+        </div>
+        <div id="footer_2">
+            <p id="p1"></p>
+            <p id="p2"></p>
+        </div>
+    </div>
+
+</body>
+</html>

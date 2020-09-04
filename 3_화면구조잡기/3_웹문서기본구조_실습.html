@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 1px solid pink;
+            box-sizing: border-box;
+        }
+        .wrap {
+            
+            width: 1000px;
+            height: 800px;
+
+            margin: auto;
+        }
+
+        .wrap>div {
+            width: 100%;
+        }
+
+        #header {height: 20%;}
+        #content {height: 80%;}
+        #footer {height: 20%;}
+
+        #header>div {
+            height: 100%;
+            float: left;
+        }
+
+        #h1 { width: 20%;}
+        #h2 { width: 80%;}
+
+        #content>div {
+            height: 100%;
+            float: left;
+        }
+
+        #c1 {width: 20%;}
+        #c2 {width: 60%;}
+        #c3 {width: 20%;}
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <div id="header">
+            <div id="h1"></div>
+            <div id="h2"></div>
+        </div>
+
+        <div id="content">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+
+
+</body>
+</html>
