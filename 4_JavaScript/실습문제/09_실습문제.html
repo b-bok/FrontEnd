@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09실습문제</title>
+    <style>
+        #add, #delete {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>배열 실습 문제4</h1>
+    문자열 바탕으로 삭제할 음식, 추가할 음식 입력 받아 지우고 추가하는 코드 작성
+
+    <fieldset>
+        <legend>보기</legend>
+        <div id="origin">
+            피자 치킨 당근 햄버거 떡볶이
+        </div>
+    </fieldset>
+
+    <input type="text" id="delete" placeholder="삭제할 음식 이름을 입력하시오">
+    <input type="text" id="add" placeholder="추가할 음식 이름을 입력하세요">
+
+    <div id="area"></div>
+
+    <br><br>
+    <button onclick="outputList();">처리및 출력</button>
+
+    <script>
+
+        var text = document.getElementById("origin").innerText;
+
+        var arr = text.split(" ");
+
+        function outputList() {
+
+            var area = document.getElementById("area");
+
+            var addOne = document.getElementById("add").value;
+            var deleteOne = document.getElementById("delete").value;
+
+
+
+            var index = arr.indexOf(deleteOne);
+
+            arr.push(addOne);
+            arr.splice(index,1);
+
+            area.innerHTML = arr.toString();
+            
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 실습 문제 1</title>
+</head>
+<body>
+        <h1>배열 실습 문제1</h1>
+        보기 데이터를 배열로 받고, 하나의 배열로 만들기
+        배열에 있는 데이터 전송하면 배열의 alert를 통해
+        배열의 위치 알려주고, 없으면 존재하지 않다고 알려주기
+
+        <fieldset>
+            <legend>보기</legend>
+            <label id="la1">사과,바나나,당근</label>
+            <label id="la2">김밥,치즈,떡볶이,햄버거</label>
+            <label id="la3">환타,사이다,콜라</label>
+            <label id="la4">고양이,강아지</label>
+        </fieldset>
+
+        <input type="text" id="sth">
+        <button onclick="check();">전송 및 처리</button>
+
+        <script>
+            function check() {
+                
+                var keyword = sth.value
+
+                var arr1 = (la1.innerText).split(",");
+                var arr2 = (la2.innerText).split(",");
+                var arr3 = (la3.innerText).split(",");
+                var arr4 = (la4.innerText).split(",");
+
+                var arrTotal = arr1.concat(arr2,arr3,arr4);
+
+                // console.log(arrTotal);
+
+                var check = arrTotal.indexOf(keyword);
+
+                if(check == -1 ) {
+                    alert("존재하지 않습니다.");
+
+                }else {
+                    alert(keyword +"는 배열 index" + check +"번째에 존재합니다.");
+                }
+
+            }
+        </script>
+</body>
+</html>

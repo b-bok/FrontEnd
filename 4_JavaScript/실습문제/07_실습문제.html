@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7번 배열실습</title>
+    <!-- <style>
+        #area {
+            border: 1px solid salmon;
+            width: 300px;
+            height: 50px;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>배열 실습 문제2</h1>
+
+    보기 문자열 가지고 정답과 같이 만들어봐!
+    출력부분에 출력하기
+
+    <fieldset>
+        <legend>보기</legend>
+        <label id="stringla1">r b</label>
+        <label id="stringla2">e v o l</label>
+    </fieldset>
+
+    <br><br>
+
+    <div id="area"></div>
+
+    <button onclick="answer();">처리</button>
+
+
+    <script>
+        function answer() {
+            var arr1 = ((stringla1.innerText).split(" ")).reverse();
+            var arr2 = ((stringla2.innerText).split(" ")).reverse();
+
+            var answer = (arr1.concat(arr2)).join("");
+           
+         
+
+           area.innerHTML = "정답 : " + answer;
+            
+        }
+    </script>
+</body>
+</html>
