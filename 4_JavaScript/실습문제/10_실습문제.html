@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding : 10px;
+        }
+        div>* {
+            margin: 5px;
+        }
+        #menu {
+            background-color: lightgray;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+        }
+        .class2 {
+            background-color: orange;
+            width: 500px;
+            height: 50px;
+        }
+
+        #titleInput {
+            width: 300px;
+        }
+    </style>>
+</head>
+<body>
+    <fieldset id="menu">
+        <legend>검색할 항목을 선택하시오</legend>
+        <div class="class1" id="area">
+            <input type="radio" name="search" id="title" onclick="display(this.id);"> <label for="title">제목</label> &nbsp;&nbsp;
+            <input type="radio" name="search" id="date" onclick="display(this.id);"> <label for="date">날짜</label> &nbsp;&nbsp;
+            <input type="radio" name="search" id="id" onclick="display(this.id);"> <label for="writer">작성자</label>
+        </div>
+    </fieldset>
+
+    <hr>
+    <br>
+    <div class="class2" id="titleBox">
+        검색할 제목을 입력하세요 : <br>
+        <input type="text" id="titleInput"> 
+
+        <button>검색</button>
+
+    </div>
+
+    <br>
+    <div class="class2" id="dateBox">
+        검색할 날짜를 선택하세요 : <br>
+        <input type="date" id="dateInput1"> - <input type="date" id="dateInput2">
+
+        <button>검색</button>
+
+    </div>
+
+    <br>
+    <div class="class2" id="idBox">
+        검색할 작성자 아이디를 입력하세요 : <br>
+        <input type="text" id="idInput"> 
+
+        <button>검색</button>
+
+    </div>
+
+
+
+    <script>
+        function display(id) {
+
+            var searchBox = id + "Box";
+            var searchTools = document.getElementsByClassName("class2");
+            // console.log(searchBox);
+
+            for(var i in searchTools) {
+
+                if(searchBox == searchTools[i].id) {
+                    searchTools[i].style.display="block"
+                }else {
+                    searchTools[i].style.display="none"
+                }
+
+
+            }
+
+
+        }
+    </script>
+</body>
+</html>
