@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제</title>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    
+    <h1>간이 계산기 만들기</h1>
+
+    첫번째 값 : 
+    <input type="Number" id="num1"> <br>
+    두번째 값 :
+    <input type="Number" id="num2"> <br>
+
+    <br>
+    <button onclick="calculator(this.value)" value="+">+</button>
+    <button onclick="calculator(this.value)" value="-">-</button>
+    <button onclick="calculator(this.value)" value="x">x</button>
+    <button onclick="calculator(this.value)" value="/">/</button>
+    <button onclick="calculator(this.value)" value="%">%</button>
+
+    <br><br>
+    <div id="area1"> </div>
+    
+    <hr>
+
+    <script>
+        function calculator(val) {
+            
+            // var num1 = Number(document.getElementById("num1").value);
+            // var num2 = Number(document.getElementById("num2").value);
+
+            // var divEl = document.getElementById("area1");
+            // var result = 0;
+
+
+            // switch(val) {
+            //     case "+" : result =  num1 + num2; break;
+            //     case "-" : result =  num1 - num2; break;
+            //     case "x" : result =  num1 * num2; break;
+            //     case "/" : result =  num1 / num2; break;
+            //     case "%" : result =  num1 % num2; break;
+            // }
+
+            // divEl.innerHTML = "계산 결과 : " + result;
+
+              var num1 = Number($("#num1").val()); 
+              var num2 = Number($("#num2").val());   
+
+              var result = 0;
+
+              switch(val) {
+                case "+" : result =  num1 + num2; break;
+                case "-" : result =  num1 - num2; break;
+                case "x" : result =  num1 * num2; break;
+                case "/" : result =  num1 / num2; break;
+                case "%" : result =  num1 % num2; break;
+            }
+
+            $("#area1").html("계산결과 : " + result);
+
+        }
+    </script>
+
+</body>
+</html>

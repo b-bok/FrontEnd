@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .area {
+            border: 1px black solid;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>문제 1. 색상 선택후 변경 버튼을 클릭하면 색상이 변경되도록 만들어보시오.</h1>
+
+    <div class="area" id="area1"></div>
+    <input type="color" id="color"> 
+    <button onclick="change();">변경</button>
+
+    <script>
+        function change() {
+            // var input = document.getElementById("color");
+            // var divEl = document.getElementById("area1");
+
+            //  divEl.style.backgroundColor = input.value;
+
+
+            $("#area1").css("backgroundColor",$("#color").val());
+
+        }
+    </script>
+
+    <hr>
+
+    <h1>문제 2. 버튼에 따른 크기 조절이 가능하게 만들어보시오</h1>
+
+    <div class="area" id="area2"></div>
+    <button onclick="changeSize(1);">50X50</button>
+    <button onclick="changeSize(2);">원본(100x100)</button>
+    <button onclick="changeSize(3);">200X200</button>
+    
+    <script>
+        function changeSize(num) {
+
+        //     var divEl = document.getElementById("area2");
+
+        //   switch(num) {
+        //       case 1 : 
+        //       divEl.style.width = "50px"
+        //       divEl.style.height = "50px"
+        //       break;
+
+        //       case 2 : 
+        //       divEl.style.width = "100px"
+        //       divEl.style.height = "100px"
+              
+        //       break;
+
+
+        //       case 3 : 
+        //       divEl.style.width = "200px"
+        //       divEl.style.height = "200px"
+              
+        //       break;
+        //   }
+
+            switch(num) {
+                case 1 : $("#area2").css({"width":"50px","height":"50px"}); break;
+                case 2 : $("#area2").css({"width":"100px","height":"100px"});break;
+                case 3 : $("#area2").css({"width":"200px","height":"200px"});break;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
