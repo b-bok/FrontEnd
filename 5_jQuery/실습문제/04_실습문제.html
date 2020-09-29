@@ -89,12 +89,16 @@
                     
                     var foods = $("#foods").text().split(",");
 
+                    /*
                     $("#area2").html(foods[0]+"<br>" 
                                     +foods[1]+"<br>"
                                     +foods[2]+"<br>"
                                     +foods[3]+"<br>"
                                     +foods[4]);
-
+                    */
+                    for(var i in foods) {
+                        $("#area2").html($("#area2").html() + foods[i] + "<br>")
+                    }
             }
 
 
